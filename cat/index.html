@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Melih Koç - Street Cats</title>
+        <link rel="icon" type="image/png" href="/icons/3d-cube.png">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+
+        <div id="navbar"></div>
+        <script src="/navbar-loader.js"></script>
+
+        <main>
+            <h2>Street Cats</h2>
+            <p></p>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/IMG_1708.png" style="width: 300%; top: -80%; left: -160%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1706.png" style="width: 800%; top: -630%; left: -380%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1701.png" style="width: 300%; top: -120%; left: -140%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1700.png" style="width: 450%; top: -280%; left: -90%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1699.png" style="width: 400%; top: -200%; left: -140%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1697.png" style="width: 400%; top: -175%; left: -150%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1696.png" style="width: 400%; top: -110%; left: -200%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1695.png" style="width: 400%; top: -200%; left: -230%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1693.png" style="width: 180%; top: -25%; left: -15%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1691.png" style="width: 700%; top: -150%; left: -320%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1689.png" style="width: 300%; top: -140%; left: -170%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/WhatsApp Görsel 2025-07-25 saat 16.29.55_2c8405c4.jpg" style="width: 550%; top: -600%; left: 0%">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/WhatsApp Görsel 2025-07-25 saat 16.29.54_75f0a302.jpg" style="width: 400%; top: -300%; left: -120%">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1669.png" style="width: 150%; top: -20%; left: -30%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1668.png" style="width: 240%; top: -115%; left: -80%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1667.png" style="width: 500%; top: -210%; left: -230%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1631.png" style="width: 300%; top: -10%; left: -90%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1606.png" style="width: 480%; top: -220%; left: -185%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1605.png" style="width: 300%; top: -180%; left: -103%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1603.png" style="width: 500%; top: -260%; left: -240%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_1088.png" style="width: 150%; top: -30%; left: -10%;">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/IMG_0121.png" style="width: 400%; top: -160%; left: -120%;">
+                </div>
+            </div>
+
+            <div class="modal" id="modal">
+                <img id="modal-img" src="">
+            </div>
+
+            <script>
+                const modal = document.getElementById('modal');
+                const modalImg = document.getElementById('modal-img');
+                const images = document.querySelectorAll('.gallery-item img');
+
+                images.forEach(img => {
+                    img.addEventListener('click', () => {
+                        modal.classList.add('active');
+                        modalImg.src = img.src;
+                    });
+                });
+
+                modal.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                    modalImg.src = '';
+                });
+            </script>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css">
+        <title>Melih Koç - Projects</title>
+        <link rel="icon" type="image/png" href="/icons/3d-cube.png">
+    </head>
+    <body>
+
+        <div id="navbar"></div>
+        <script src="/navbar-loader.js"></script>
+
+        <main>
+            <div class="projects">
+                <ul>
+                    <li>
+                        <div class="status-badge status-completed">Completed</div>
+                        <h3>Byte & Bite</h3>
+                        <p>A web-based prototype food delivery app with a React frontend, a Spring Boot backend and a PostgreSQL relational database. Developed as a team of five for our software engineering course.</p>
+                        <p><b>Technologies:</b> TypeScript, Java, React, Spring Boot, PostgreSQL</p>
+                    </li>
+                    <li>
+                        <div class="status-badge status-completed">Completed</div>
+                        <h3>Planetary Orbit Simulator</h3>
+                        <p>An interactive simulation of Kepler's laws of planetary motion made with Three.js. Developed as a team of four for our computer graphics course.</p>
+                        <p><b>Technologies:</b> JavaScript, Three.js, GLSL, HTML, CSS</p>
+                        <p><a href="https://github.com/HopeOrb/PlanetaryOrbitSimViaWebGL2">GitHub Repository</a></p>
+                        <div class="screenshots">
+                            <img src="screenshots/orbit/1.png">
+                            <img src="screenshots/orbit/2.png">
+                        </div>
+                        <div class="video-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PiQDeAovByc?si=79kTi-uGqty1uaKU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </main>
+
+        <div id="image-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
+
+        <script>
+            // Tüm küçük resimleri seç
+            const images = document.querySelectorAll('.screenshots img');
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            const closeBtn = document.querySelector('.close');
+
+            // Her resme tıklama ekle
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    modalImg.src = img.src;
+                });
+            });
+
+            // Kapatmak için çarpıya basıldığında
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            // Modal alanına tıklanırsa da kapanır
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        </script>
+
+    </body>
+</html>
